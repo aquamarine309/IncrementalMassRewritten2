@@ -12,8 +12,8 @@
 }
 
 html {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   touch-action: pan-y;
 }
@@ -63,8 +63,9 @@ body {
 }
 
 .l-game-header {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, 1fr);
   font-size: 11px;
   padding: 4px 0;
 }
@@ -164,7 +165,7 @@ body {
 }
 
 .o-primary-btn {
-  color: var(--color-text);
+  color: white;
   font-family: BlobFont, serif;
   border: 1px solid white;
   background-color: #353535;
@@ -195,8 +196,9 @@ body {
 
 #page {
   width: 100%;
-  height: 100%;
-  padding: 0 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: calc(var(--height-app-bar) + 100px);
 }
 
 .l-rank-row {
@@ -527,10 +529,13 @@ body {
   color: var(--color-text);
   background-color: #171717;
   border: 1px solid black;
-  border-radius: 2px;
   transition-duration: 0.2s;
   -webkit-user-select: none;
   user-select: none;
+}
+
+.ad-ui .c-modal__confirmation-toggle__checkbox {
+  border-radius: 2px;
 }
 
 .c-modal__confirmation-toggle__checkbox--active {
@@ -574,4 +579,19 @@ body {
 .l-bottom-padding {
   width: 100%;
   height: 50px;
+}
+
+.l-rank-info {
+  border: 1px solid white;
+  padding: 5px;
+  margin: 6px 0;
+}
+
+.ad-ui .l-rank-info {
+  border-radius: 4px;
+}
+
+.l-challenges-layout {
+  display: flex;
+  flex-direction: column;
 }
