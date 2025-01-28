@@ -366,7 +366,18 @@ body {
 }
 
 .l-modal-overlay {
+  /* stylelint-disable-next-line unit-allowed-list */
+  width: 100vw;
+  /* stylelint-disable-next-line unit-allowed-list */
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 2;
+  animation-name: a-modal-overlay-fadein;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  pointer-events: auto;
 }
 
 .a-overlay-enter-active, .a-overlay-leave-active {
@@ -594,4 +605,20 @@ body {
 .l-challenges-layout {
   display: flex;
   flex-direction: column;
+}
+
+.o-challenge-header {
+  color: var(--color-grey);
+  margin: 5px 0;
+}
+
+.c-modal-options .o-primary-btn--width-medium {
+  margin-top: 7px;
+}
+
+.c-modal-away-progress__header {
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
