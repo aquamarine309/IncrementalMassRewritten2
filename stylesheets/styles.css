@@ -44,6 +44,9 @@ body {
   --color-rage-powers: red;
   --color-dark-matter: yellow;
   --height-app-bar: 56px;
+  --color-proton: limegreen;
+  --color-neutron: yellow;
+  --color-electron: red;
 }
 
 #browser-warning {
@@ -62,12 +65,17 @@ body {
   font-weight: bold;
 }
 
+input:focus {
+  border-radius: 0;
+}
+
 .l-game-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(auto-fill, 1fr);
   font-size: 11px;
   padding: 4px 0;
+  margin-bottom: 10px;
 }
 
 .c-mass-amount {
@@ -132,6 +140,10 @@ body {
 
 .i-atom {
   background-image: url("../images/atom.png");
+}
+
+.i-quark {
+  background-image: url("../images/quark.png");
 }
 
 .c-rage-powers-amount {
@@ -313,6 +325,10 @@ body {
 
 .i-condenser {
   background-image: url("../images/condenser.png");
+}
+
+.i-cosmic-ray {
+  background-image: url("../images/cosmic_ray.png");
 }
 
 .o-buy-mass-upgrade-btn {
@@ -539,7 +555,7 @@ body {
   font-size: 13px;
   color: var(--color-text);
   background-color: #171717;
-  border: 1px solid black;
+  border: 1px solid white;
   transition-duration: 0.2s;
   -webkit-user-select: none;
   user-select: none;
@@ -574,6 +590,10 @@ body {
 
 .c-green {
   color: #00bb00;
+}
+
+.c-yellow {
+  color: yellow;
 }
 
 .c-bh-info {
@@ -621,4 +641,56 @@ body {
   font-size: 15px;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.o-quark {
+  animation: a-quark 6s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+@keyframes a-quark {
+ 0%, 100% {
+    color: red;
+  }
+  33.3% {
+    color: blue;
+  }
+  66.7% {
+    color: limegreen;
+  }
+}
+
+.o-proton {
+  color: var(--color-proton);
+}
+
+.o-neutron {
+  color: var(--color-neutron);
+}
+
+.o-electron {
+  color: var(--color-electron);
+}
+
+.o-notification {
+  width: 100%;
+  height: 40px;
+  color: black;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.o-notification--success {
+  background: #ff9800;
+}
+
+.o-notification--info {
+  background: #99aaff;
+}
+
+.c-mass-softcap-row {
+  font-size: 14px;
+}
+
+.c-mass-softcap-row:first-child {
+  color: red;
 }
