@@ -694,3 +694,35 @@ input:focus {
 .c-mass-softcap-row:first-child {
   color: red;
 }
+
+.l-element-table-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 10px auto;
+  overflow-x: auto;
+  min-height: 414px;
+}
+
+.o-element-grid {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border: 1px solid white;
+  background-color: #1b1a1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.o-element-grid--available {
+  background-color: #444444;
+}
+
+.o-element-grid--bought {
+  background-color: #00520b;
+}
