@@ -959,28 +959,46 @@ input:focus {
   background-color: rgba(0, 255, 34, 0.25);
 }
 
+.ad-ui .l-fermions-container--quark {
+  background-color: rgba(216, 120, 0, 0.4);
+}
+
+.ad-ui .l-fermions-container--lepton {
+  background-color: rgba(0, 216, 12, 0.4);
+}
+
 .c-fermions {
-  overflow-x: auto;
   display: grid;
+  justify-items: center;
+  align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(auto-fill, 1fr);
-  text-align: center;
 }
 
 .c-fermion-box {
   height: 100px;
   width: 100px;
   display: flex;
-  border: 2px solid var(--main-color);
+  border: 1px solid var(--main-color);
   margin: 3px;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   padding: 5px;
+  background-color: rgba(88, 88, 88, 0.05);
+}
+
+.ad-ui .c-fermion-box {
+  border-radius: 5px;
 }
 
 .o-fermion-symbol {
-  background-image: linear-gradient(135deg, var(--main-color), rgba(0, 0, 0, 0.1));
+  background: radial-gradient(
+    circle at 30% 30%,
+    white 0%,
+    var(--main-color) 10%,
+    rgb(32, 32, 32, 0.6) 90%
+  );
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -997,4 +1015,37 @@ input:focus {
 
 .l-fermions-container--lepton .c-fermion-box {
   --main-color: rgb(0, 255, 34);
+}
+
+.ad-ui .l-fermions-container--quark .c-fermion-box {
+  --main-color: rgb(216, 120, 0);
+}
+
+.ad-ui .l-fermions-container--lepton .c-fermion-box {
+  --main-color: rgb(0, 216, 12);
+}
+
+sub {
+  font-size: 80%;
+}
+
+.o-fermion-name {
+  font-weight: bold;
+  color: #eeeeff;
+}
+
+.ad-ui .o-fermion-name {
+  font-weight: bold;
+  color: #306365;
+}
+
+.l-fermion-info {
+  border: 1px solid white;
+  padding: 5px 10px;
+  margin: 6px 3px;
+}
+
+.ad-ui .l-fermion-info {
+  border-color: black;
+  border-radius: 6px;
 }
