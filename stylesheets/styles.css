@@ -821,6 +821,30 @@ input:focus {
   color: #790000;
 }
 
+.c-mass-softcap-row:nth-child(3) {
+  color: #7a0056;
+}
+
+.c-mass-softcap-row:nth-child(4) {
+  color: #ff5c00;
+}
+
+.c-mass-softcap-row:nth-child(5) {
+  color: #ffde00;
+}
+
+.c-mass-softcap-row:nth-child(6) {
+  color: #a6ff00;
+}
+
+.c-mass-softcap-row:nth-child(7) {
+  color: #00ff95;
+}
+
+.c-mass-softcap-row:nth-child(8) {
+  color: #00c1ff;
+}
+
 .l-element-table-container {
   overflow-x: auto;
   width: 100%;
@@ -971,8 +995,18 @@ input:focus {
   display: grid;
   justify-items: center;
   align-items: center;
+}
+
+.l-fermions-container--quark .c-fermions {
+  grid-auto-flow: column;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(auto-fill, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.l-fermions-container--lepton .c-fermions {
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .c-fermion-box {
@@ -1025,6 +1059,21 @@ input:focus {
   --main-color: rgb(0, 216, 12);
 }
 
+.c-fermion-box--active {
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      var(--main-color),
+      var(--main-color) 10px,
+      rgba(88, 88, 88, 0.05) 10px,
+      rgba(88, 88, 88, 0.05) 20px
+    );
+}
+
+.c-fermion-box--locked {
+  filter: grayscale(60%);
+}
+
 sub {
   font-size: 80%;
 }
@@ -1041,8 +1090,11 @@ sub {
 
 .l-fermion-info {
   border: 1px solid white;
-  padding: 5px 10px;
+  padding: 8px 10px;
   margin: 6px 3px;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
 }
 
 .ad-ui .l-fermion-info {
