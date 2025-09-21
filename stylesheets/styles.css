@@ -50,6 +50,8 @@ body {
   --color-electron: red;
   --color-dilation: #009a00;
   --color-supernova: #ff009d;
+  --color-fermion-quark: #ff9100;
+  --color-fermion-lepton: #00ff22;
   --color-bought: #00520b;
   --var-border-radius: 0;
 }
@@ -62,6 +64,8 @@ body {
   --color-dark-matter: #ffdd33;
   --color-neutron: #ffdd33;
   --color-dilation: #a4dd17;
+  --color-fermion-quark: #d87800;
+  --color-fermion-lepton: #00d80c;
   --color-bought: #6ad477;
   --color-good: #127a20;
   --color-bad: #b84b5f;
@@ -703,13 +707,15 @@ input:focus {
   height: 50px;
 }
 
-.l-rank-info {
+.l-rank-info,
+.l-scaling-info {
   border: 1px solid white;
   margin: 6px 0;
   padding: 5px;
 }
 
-.ad-ui .l-rank-info {
+.ad-ui .l-rank-info,
+.ad-ui .l-scaling-info {
   border-color: black;
   border-radius: 4px;
 }
@@ -1044,19 +1050,11 @@ input:focus {
 }
 
 .l-fermions-container--quark .c-fermion-box {
-  --main-color: rgb(255, 145, 0);
+  --main-color: var(--color-fermion-quark);
 }
 
 .l-fermions-container--lepton .c-fermion-box {
-  --main-color: rgb(0, 255, 34);
-}
-
-.ad-ui .l-fermions-container--quark .c-fermion-box {
-  --main-color: rgb(216, 120, 0);
-}
-
-.ad-ui .l-fermions-container--lepton .c-fermion-box {
-  --main-color: rgb(0, 216, 12);
+  --main-color: var(--color-fermion-lepton);
 }
 
 .c-fermion-box--active {
