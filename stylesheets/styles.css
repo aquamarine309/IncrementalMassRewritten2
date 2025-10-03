@@ -32,7 +32,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  font-family: BlobFont, serif;
+  font-family: BlobFont, "Xia Lu Wen Kai";
   color: var(--color-text);
   background-color: var(--color-background);
 }
@@ -79,17 +79,26 @@ body {
   font-family: BlobFont;
   font-weight: normal;
   src: url("blob_font_regular.ttf");
+  unicode-range: U+0000-007F. U+0370-03FF, U+1F00-1FFF;
 }
 
 @font-face {
   font-family: BlobFont;
   font-weight: bold;
   src: url("blob_font_bold.ttf");
+  unicode-range: U+0000-007F, U+0370-03FF, U+1F00-1FFF;
 }
 
 @font-face {
-  font-family: BabelStoneHan;
-  src: url("BabelStoneHan.ttf");
+  font-family: "Xia Lu Wen Kai";
+  src: url("XiaLuWenKai-Light.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Xia Lu Wen Kai";
+  src: url("XiaLuWenKai-Medium.ttf");
+  font-weight: bold;
 }
 
 input:focus {
@@ -222,10 +231,16 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  overflow-x: hidden;
+}
+
+.c-header-resource-info span {
+  white-space: nowrap;
+  overflow-x: hidden;
 }
 
 .o-primary-btn {
-  font-family: BlobFont, serif;
+  font-family: BlobFont, "Xia Lu Wen Kai";
   color: white;
   background-color: #353535;
   border: 1px solid white;
@@ -877,7 +892,6 @@ input:focus {
   position: absolute;
   justify-content: center;
   align-items: center;
-  font-family: BlobFont, BabelStoneHan, serif;
   font-size: 12px;
   font-weight: bold;
   color: white;
@@ -928,7 +942,7 @@ input:focus {
 
 .c-modal-input {
   text-align: center;
-  font-family: BlobFont, serif;
+  font-family: BlobFont, "Xia Lu Wen Kai";
   color: white;
   background-color: transparent;
   border-top: none;
