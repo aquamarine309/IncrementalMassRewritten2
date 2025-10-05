@@ -41,6 +41,7 @@ body {
   --color-text: #bbbbbb;
   --color-background: #1b1a1e;
   --color-grey: #777777;
+  --color-accent: white;
   --color-rage-powers: red;
   --color-dark-matter: yellow;
   --height-app-bar: 56px;
@@ -56,19 +57,29 @@ body {
   --var-border-radius: 0;
 }
 
-:root .ad-ui {
+:root .light-theme {
   --color-background: #ffffff;
   --color-app-bar: #018577;
   --color-text: #787878;
   --color-grey: #606060;
+  --color-accent: black;
   --color-dark-matter: #ffdd33;
   --color-neutron: #ffdd33;
-  --color-dilation: #a4dd17;
+  --color-dilation: #00da00;
   --color-fermion-quark: #d87800;
   --color-fermion-lepton: #00d80c;
   --color-bought: #6ad477;
+}
+
+:root .ad-ui {
   --color-good: #127a20;
   --color-bad: #b84b5f;
+  --color-dilation: #7ead0b;
+}
+
+:root .light-theme.ad-ui {
+  --color-bad: #b82b3f;
+  --color-dilation: #a4dd17;
 }
 
 #browser-warning {
@@ -127,7 +138,7 @@ input:focus {
   margin: 0 5px;
 }
 
-.ad-ui .i-header {
+.light-theme .i-header {
   filter: invert(1) hue-rotate(180deg);
 }
 
@@ -241,21 +252,28 @@ input:focus {
 
 .o-primary-btn {
   font-family: BlobFont, "Xia Lu Wen Kai";
-  color: white;
   background-color: #353535;
   border: 1px solid white;
   padding: 5px;
+  color: var(--color-accent);
 }
 
 .ad-ui .o-primary-btn {
-  color: black;
-  background-color: #f6f6f6;
+  background-color: #181818;
   border-color: var(--color-good);
   border-radius: 4px;
   transition-duration: 0.1s;
 }
 
+.light-theme .o-primary-btn {
+  background-color: #f6f6f6;
+}
+
 .ad-ui .o-primary-btn:not(.o-primary-btn--disabled):active {
+  background-color: #336633;
+}
+
+.light-theme.ad-ui .o-primary-btn:not(.o-primary-btn--disabled):active {
   background-color: #8bc599;
 }
 
@@ -264,8 +282,16 @@ input:focus {
 }
 
 .ad-ui .o-primary-btn--disabled {
-  background-color: #e3e3e3;
+  background-color: #272727;
   border-color: var(--color-bad);
+}
+
+.light-theme .o-primary-btn--disabled {
+  background-color: #e3e3e3;
+}
+
+.light-theme:not(.ad-ui) .o-primary-btn {
+  border-color: #303030;
 }
 
 .l-view {
@@ -347,7 +373,7 @@ input:focus {
   margin: 0 5px;
 }
 
-.ad-ui .i-upgrade {
+.light-theme .i-upgrade {
   filter: invert(1) hue-rotate(180deg);
 }
 
@@ -448,7 +474,7 @@ input:focus {
   background-color: var(--color-background);
 }
 
-.ad-ui .l-drawer {
+.light-theme .l-drawer {
   color: black;
 }
 
@@ -509,7 +535,7 @@ input:focus {
   padding: 20px;
 }
 
-.ad-ui .c-drawer-top {
+.light-theme .c-drawer-top {
   color: black;
   background-image: linear-gradient(305deg, #4db6ac, #009688, #00695c);
 }
@@ -521,7 +547,7 @@ input:focus {
   background-size: contain;
 }
 
-.ad-ui .c-game-icon {
+.light-theme .c-game-icon {
   filter: invert(1) hue-rotate(180deg);
   opacity: 0.8;
 }
@@ -585,17 +611,24 @@ input:focus {
 
 .c-modal {
   background-color: #171717;
-  border: 1px solid white;
+  border: 1px solid black;
   padding: 30px;
   transition: all 0.2s, left 0s, top 0s, transform 0s;
 }
 
-.ad-ui .c-modal {
+.l-game-ui:not(.ad-ui) .c-modal {
+  border-color: white;
+  border-width: 1px;
+}
+
+.light-theme .c-modal {
   color: black;
   background-color: #e0e0e0;
-  border-color: black;
-  border-width: 2px;
+}
+
+.ad-ui .c-modal {
   border-radius: 9px;
+  border-width: 1.5px;
 }
 
 .c-modal-message,
@@ -615,7 +648,7 @@ input:focus {
   pointer-events: none;
 }
 
-.ad-ui .o-softcapped {
+.light-theme .o-softcapped {
   color: #505382;
 }
 
@@ -673,9 +706,13 @@ input:focus {
   user-select: none;
 }
 
-.ad-ui .c-modal__confirmation-toggle__checkbox {
+.light-theme .c-modal__confirmation-toggle__checkbox {
   background-color: #e3e3e3;
   border-color: var(--color-bad);
+  border-radius: 2px;
+}
+
+.ad-ui .c-modal__confirmation-toggle__checkbox {
   border-radius: 2px;
 }
 
@@ -683,7 +720,7 @@ input:focus {
   background-color: #444444;
 }
 
-.ad-ui .c-modal__confirmation-toggle__checkbox--active {
+.light-theme .c-modal__confirmation-toggle__checkbox--active {
   background-color: #f6f6f6;
   border-color: var(--color-good);
 }
@@ -701,11 +738,11 @@ input:focus {
   color: #00bb00;
 }
 
-.ad-ui .c-sky {
+.light-theme .c-sky {
   color: #44acee;
 }
 
-.ad-ui .c-green {
+.light-theme .c-green {
   color: #00aa00;
 }
 
@@ -713,7 +750,7 @@ input:focus {
   color: yellow;
 }
 
-.ad-ui .c-yellow {
+.light-theme .c-yellow {
   color: #ffdf00;
 }
 
@@ -729,14 +766,13 @@ input:focus {
 
 .l-rank-info,
 .l-scaling-info {
-  border: 1px solid white;
+  border: 1px solid var(--color-accent);
   margin: 6px 0;
   padding: 5px;
 }
 
 .ad-ui .l-rank-info,
 .ad-ui .l-scaling-info {
-  border-color: black;
   border-radius: 4px;
 }
 
@@ -900,10 +936,13 @@ input:focus {
   cursor: pointer;
 }
 
-.ad-ui .o-element-grid {
+.light-theme .o-element-grid {
   color: black;
   background-color: #e3e3e3;
   border-color: black;
+}
+
+.ad-ui .o-element-grid { 
   border-radius: 3px;
 }
 
@@ -911,7 +950,7 @@ input:focus {
   background-color: #444444;
 }
 
-.ad-ui .o-element-grid--available {
+.light-theme .o-element-grid--available {
   background-color: #f6f6f6;
 }
 
@@ -925,11 +964,7 @@ input:focus {
 
 .o-highlight {
   font-size: 120%;
-  color: white;
-}
-
-.ad-ui .o-highlight {
-  color: black;
+  color: var(--color-accent);
 }
 
 .o-supernova {
@@ -954,7 +989,7 @@ input:focus {
   transition-duration: 0.1s;
 }
 
-.ad-ui .c-modal-input {
+.light-theme .c-modal-input {
   color: black;
   border-bottom-color: #dd1860;
 }
@@ -985,11 +1020,7 @@ input:focus {
 }
 
 .o-tachyon-particle {
-  fill: white;
-}
-
-.ad-ui .o-tachyon-particle {
-  fill: black;
+  fill: var(--color-accent);
 }
 
 .l-fermions-container {
@@ -1008,11 +1039,11 @@ input:focus {
   background-color: rgba(0, 255, 34, 0.25);
 }
 
-.ad-ui .l-fermions-container--quark {
+.light-theme .l-fermions-container--quark {
   background-color: rgba(216, 120, 0, 0.4);
 }
 
-.ad-ui .l-fermions-container--lepton {
+.light-theme .l-fermions-container--lepton {
   background-color: rgba(0, 216, 12, 0.4);
 }
 
@@ -1100,13 +1131,13 @@ sub {
   color: #eeeeff;
 }
 
-.ad-ui .o-fermion-name {
+.light-theme .o-fermion-name {
   font-weight: bold;
   color: #306365;
 }
 
 .l-fermion-info {
-  border: 1px solid white;
+  border: 1px solid var(--color-accent);
   padding: 8px 10px;
   margin: 6px 3px;
   color: var(--color-text);
@@ -1115,6 +1146,5 @@ sub {
 }
 
 .ad-ui .l-fermion-info {
-  border-color: black;
   border-radius: 6px;
 }
