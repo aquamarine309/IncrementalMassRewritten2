@@ -215,35 +215,35 @@ input:focus {
 }
 
 .i-mass {
-  background-image: url("/images/mass.png");
+  background-image: url("./images/mass.png");
 }
 
 .i-rage-powers {
-  background-image: url("/images/rp.png");
+  background-image: url("./images/rp.png");
 }
 
 .i-dark-matter {
-  background-image: url("/images/dm.png");
+  background-image: url("./images/dm.png");
 }
 
 .i-black-hole {
-  background-image: url("/images/bh.png");
+  background-image: url("./images/bh.png");
 }
 
 .i-atom {
-  background-image: url("/images/atom.png");
+  background-image: url("./images/atom.png");
 }
 
 .i-quark {
-  background-image: url("/images/quark.png");
+  background-image: url("./images/quark.png");
 }
 
 .i-dilation {
-  background-image: url("/images/md.png");
+  background-image: url("./images/md.png");
 }
 
 .i-supernova {
-  background-image: url("/images/sn.png");
+  background-image: url("./images/sn.png");
 }
 
 .c-rage-powers-amount {
@@ -468,35 +468,35 @@ input:focus {
 }
 
 .i-mass-upgrade-1 {
-  background-image: url("/images/mass_upg1.png");
+  background-image: url("./images/mass_upg1.png");
 }
 
 .i-mass-upgrade-2 {
-  background-image: url("/images/mass_upg2.png");
+  background-image: url("./images/mass_upg2.png");
 }
 
 .i-mass-upgrade-3 {
-  background-image: url("/images/mass_upg3.png");
+  background-image: url("./images/mass_upg3.png");
 }
 
 .i-mass-upgrade-4 {
-  background-image: url("/images/mass_upg4.png");
+  background-image: url("./images/mass_upg4.png");
 }
 
 .i-tickspeed {
-  background-image: url("/images/tickspeed.png");
+  background-image: url("./images/tickspeed.png");
 }
 
 .i-condenser {
-  background-image: url("/images/condenser.png");
+  background-image: url("./images/condenser.png");
 }
 
 .i-cosmic-ray {
-  background-image: url("/images/cosmic_ray.png");
+  background-image: url("./images/cosmic_ray.png");
 }
 
 .i-star-booster {
-  background-image: url("/images/star_booster.png");
+  background-image: url("./images/star_booster.png");
 }
 
 .o-buy-mass-upgrade-btn {
@@ -606,7 +606,7 @@ input:focus {
 .c-game-icon {
   width: 50px;
   height: 50px;
-  background-image: url("/images/mass_manifest.png");
+  background-image: url("./images/mass_manifest.png");
   background-size: contain;
 }
 
