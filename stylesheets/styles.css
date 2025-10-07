@@ -53,6 +53,7 @@ body {
   --color-supernova: #ff009d;
   --color-fermion-quark: #ff9100;
   --color-fermion-lepton: #00ff22;
+  --color-quantum: lightgreen;
   --color-bought: #00520b;
   --var-border-radius: 0;
 }
@@ -246,6 +247,10 @@ input:focus {
   background-image: url("../images/sn.png");
 }
 
+.i-quantum {
+  background-image: url("../images/qu.png");
+}
+
 .c-rage-powers-amount {
   color: var(--color-rage-powers);
 }
@@ -256,6 +261,10 @@ input:focus {
 
 .c-atom-amount {
   color: var(--color-atom);
+}
+
+.o-quantum {
+  color: var(--color-quantum);
 }
 
 .l-header-resource-row {
@@ -311,6 +320,10 @@ input:focus {
 
 .o-supernova-border {
   border-color: var(--color-supernova);
+}
+
+.o-quantum-border {
+  border-color: var(--color-quantum);
 }
 
 .o-primary-btn {
