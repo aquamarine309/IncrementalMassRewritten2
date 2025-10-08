@@ -1114,6 +1114,14 @@ input:focus {
   fill: var(--color-accent);
 }
 
+.o-tachyon-particle-1 {
+  fill: red;
+}
+
+.o-tachyon-particle-2 {
+  fill: blue;
+}
+
 .l-fermions-container {
   padding: 5px;
 }
