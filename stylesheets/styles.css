@@ -251,6 +251,10 @@ input:focus {
   background-image: url("../images/qu.png");
 }
 
+.i-speed {
+  background-image: url("../images/preQGSpeed.png");
+}
+
 .c-rage-powers-amount {
   color: var(--color-rage-powers);
 }
@@ -265,6 +269,10 @@ input:focus {
 
 .o-quantum {
   color: var(--color-quantum);
+}
+
+.o-speed-text {
+  color: orange;
 }
 
 .l-header-resource-row {
@@ -324,6 +332,10 @@ input:focus {
 
 .o-quantum-border {
   border-color: var(--color-quantum);
+}
+
+.o-speed-border {
+  border-color: orange;
 }
 
 .o-primary-btn {
