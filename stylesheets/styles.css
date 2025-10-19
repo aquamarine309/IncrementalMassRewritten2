@@ -54,6 +54,9 @@ body {
   --color-fermion-quark: #ff9100;
   --color-fermion-lepton: #00ff22;
   --color-quantum: lightgreen;
+  --color-chroma0: #ff0000;
+  --color-chroma1: #00ff00;
+  --color-chroma2: #6666ff;
   --color-bought: #00520b;
   --var-border-radius: 0;
 }
@@ -69,6 +72,7 @@ body {
   --color-dilation: #00da00;
   --color-fermion-quark: #d87800;
   --color-fermion-lepton: #00d80c;
+  --color-quantum: #00bc10;
   --color-bought: #6ad477;
 }
 
@@ -298,6 +302,7 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   overflow-x: hidden;
 }
 
@@ -522,6 +527,10 @@ input:focus {
 
 .i-star-booster {
   background-image: url("../images/star_booster.png");
+}
+
+.i-cosmic-string {
+  background-image: url("../images/cosmic_string.png");
 }
 
 .o-buy-mass-upgrade-btn {
