@@ -1046,6 +1046,7 @@ input:focus {
   background-color: #1b1a1e;
   border: 1px solid white;
   cursor: pointer;
+  transition-duration: 0.2s;
 }
 
 .light-theme .o-element-grid {
@@ -1068,6 +1069,11 @@ input:focus {
 
 .o-element-grid--bought {
   background-color: var(--color-bought) !important;
+}
+
+.o-element-grid--selected {
+  transform: scale(110%);
+  z-index: 1;
 }
 
 .o-dilation {
@@ -1238,6 +1244,10 @@ input:focus {
     );
 }
 
+.c-fermion-box--selected {
+  box-shadow: inset 0 0 5px 3px var(--main-color);
+}
+
 .c-fermion-box--locked {
   filter: grayscale(60%);
 }
@@ -1249,6 +1259,10 @@ sub {
 .o-fermion-name {
   font-weight: bold;
   color: #eeeeff;
+}
+
+.o-fermion-tier {
+  font-size: 10px;
 }
 
 .light-theme .o-fermion-name {
