@@ -74,6 +74,9 @@ body {
   --color-fermion-lepton: #00d80c;
   --color-quantum: #00bc10;
   --color-bought: #6ad477;
+  --color-chroma0: #dd0000;
+  --color-chroma1: #00aa00;
+  --color-chroma2: #4444cc;
 }
 
 :root .ad-ui {
