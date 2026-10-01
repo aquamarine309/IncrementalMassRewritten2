@@ -45,7 +45,7 @@ export default {
 </script>
 
 <template>
-  <Button
+  <button
     v-if="isUnlocked"
     class="c-main-upgrade-btn"
     :class="buttonClass"
