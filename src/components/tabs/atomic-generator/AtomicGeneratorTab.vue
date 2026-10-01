@@ -33,8 +33,8 @@ export default {
   <div>
     <div class="c-bh-info">
       <span>
-        <i18n
-          path="atomic_power_description"
+        <i18n-t
+          keypath="atomic_power_description"
           tag="span"
         >
           <template #atomicPower>
@@ -43,7 +43,7 @@ export default {
             </span>
             <span>{{ formatGain(atomicPower, gain) }}</span>
           </template>
-        </i18n>
+        </i18n-t>
       </span>
       <span class="c-green">{{ $t('atomic_power_free_tickspeeds', { free: format(free, 0) }) }}</span>
     </div>

@@ -44,15 +44,15 @@ export default {
 <template>
   <div>
     <div class="c-bh-info">
-      <i18n
-        path="you_have_X"
+      <i18n-t
+        keypath="you_have_X"
         tag="div"
       >
         <template #value>
           <span class="o-highlight">{{ formatMass(blackHole) }}</span>
           {{ formatGain(blackHole, gain, true) }} {{ $t("of_black_hole") }}
         </template>
-      </i18n>
+      </i18n-t>
       <span class="c-green">{{ $t("black_hole_effect", { value: formatX(mult) }) }}</span>
       <br>
       <span>{{ $t("black_hole_formula") }}:</span>

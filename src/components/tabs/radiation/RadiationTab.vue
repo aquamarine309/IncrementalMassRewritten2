@@ -47,8 +47,8 @@ export default {
 
 <template>
   <div>
-    <i18n
-      path="your_frequency"
+    <i18n-t
+      keypath="your_frequency"
       tag="div"
     >
       <template #value>
@@ -61,7 +61,7 @@ export default {
           {{ formatX(effect) }}
         </span>
       </template>
-    </i18n>
+    </i18n-t>
     <div v-if="radiationUnlocked && next">
       {{ $t("next_radiation", { value: format(next.requirement), object: next.name }) }}
     </div>

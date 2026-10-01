@@ -44,8 +44,8 @@ export default {
 
 <template>
   <div>
-    <i18n
-      path="star_collapse_description"
+    <i18n-t
+      keypath="star_collapse_description"
       tag="div"
     >
       <template #starsAndRequirement>
@@ -53,7 +53,7 @@ export default {
           {{ format(stars, 2) }} / {{ format(requirement, 2) }} {{ formatGain(stars, gain) }}
         </span>
       </template>
-    </i18n>
+    </i18n-t>
     <br>
     <div class="c-green">
       {{ $t("currently_X", { effect: formatX(boost) }) }}

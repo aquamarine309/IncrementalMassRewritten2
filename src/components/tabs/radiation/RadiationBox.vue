@@ -90,8 +90,8 @@ export default {
       {{ name }}
     </div>
     <div>
-      <i18n
-        path="distance_X"
+      <i18n-t
+        keypath="distance_X"
         tag="div"
       >
         <template #value>
@@ -99,9 +99,9 @@ export default {
             {{ $tc("X_meter", checkSingle(distance), { value: `${format(distance)} ${formatGain(distance, distanceGain)}` }) }}
           </span>
         </template>
-      </i18n>
-      <i18n
-        path="multiplier_X_to_Y"
+      </i18n-t>
+      <i18n-t
+        keypath="multiplier_X_to_Y"
         tag="div"
       >
         <template #value>
@@ -110,7 +110,7 @@ export default {
         <template #object>
           {{ previousName }}
         </template>
-      </i18n>
+      </i18n-t>
     </div>
     <div class="c-radiation-upgrade-container">
       <PrimaryButton

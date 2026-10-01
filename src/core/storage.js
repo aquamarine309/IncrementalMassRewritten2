@@ -73,6 +73,7 @@ export const GameStorage = {
   updatePlayerData() {
     Lazy.invalidateAll();
     i18n.locale = player.options.language;
+    i18n.global.locale = player.options.language;
     const diff = Date.now() - player.lastUpdate;
     if (diff > 1e4) {
       simulateTime(diff / 1000);

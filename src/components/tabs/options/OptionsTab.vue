@@ -2,6 +2,7 @@
 import PrimaryButton from "@/components/PrimaryButton";
 import ButtonCycle from "@/components/ButtonCycle";
 import PrimaryToggleButton from "@/components/PrimaryToggleButton";
+import { invalidateI18nCache } from "@/core/ui";
 
 export default {
   name: "OptionsTab",
@@ -26,10 +27,10 @@ export default {
   computed: {
     massDisplayLabels() {
       return [
-        i18n.t("default"),
-        i18n.t("always_show_g"),
-        i18n.t("always_show_mlt"),
-        i18n.t("important_units_only")
+        this.$t("default"),
+        this.$t("always_show_g"),
+        this.$t("always_show_mlt"),
+        this.$t("important_units_only")
       ];
     }
   },
@@ -50,6 +51,8 @@ export default {
       EventHub.dispatch(GAME_EVENT.FORMAT_CHANGED);
       player.options.language = value;
       i18n.locale = value;
+      i18n.global.locale = value;
+      invalidateI18nCache();
     },
     massDisplay(value) {
       EventHub.dispatch(GAME_EVENT.FORMAT_CHANGED);

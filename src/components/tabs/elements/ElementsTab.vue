@@ -25,10 +25,10 @@ export default {
       return GameElements.all;
     },
     names() {
-      return this.$t("element_names").split("|");
+      return this.$t("element_names").split(",");
     },
     symbols() {
-      return this.$t("element_symbols").split("|");
+      return this.$t("element_symbols").split(",");
     },
   },
   watch: {

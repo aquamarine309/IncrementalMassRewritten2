@@ -33,8 +33,8 @@ export default {
   <div>
     <div class="c-bh-info">
       <span>
-        <i18n
-          path="you_have_X_blueprint_particle"
+        <i18n-t
+          keypath="you_have_X_blueprint_particle"
           tag="span"
         >
           <template #value>
@@ -43,7 +43,7 @@ export default {
             </span>
             <span>{{ formatGain(blueprint, gain) }}</span>
           </template>
-        </i18n>
+        </i18n-t>
       </span>
       <span class="c-green">Which increases pre-Quantum global speed by {{ formatX(speed) }}</span>
     </div>

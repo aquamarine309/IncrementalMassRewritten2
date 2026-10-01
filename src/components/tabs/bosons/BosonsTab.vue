@@ -88,8 +88,8 @@ export default {
     </div>
     <div class="c-bosons-row">
       <div class="c-boson-grid c-boson-graviton">
-        <i18n
-          path="boson_graviton_description"
+        <i18n-t
+          keypath="boson_graviton_description"
           tag="div"
         >
           <template #amountAndGain>
@@ -100,11 +100,11 @@ export default {
           <template #effect>
             {{ format(gravitonEffect) }}
           </template>
-        </i18n>
+        </i18n-t>
       </div>
       <div class="c-boson-grid c-boson-higgs">
-        <i18n
-          path="boson_higgs_boson_description"
+        <i18n-t
+          keypath="boson_higgs_boson_description"
           tag="div"
         >
           <template #amountAndGain>
@@ -115,14 +115,14 @@ export default {
           <template #effect>
             {{ format(higgsBosonEffect) }}
           </template>
-        </i18n>
+        </i18n-t>
       </div>
     </div>
     <div class="c-bosons-row">
       <div class="c-boson-grid c-boson-photon">
         <div class="c-boson-amount">
-          <i18n
-            path="boson_photon_description"
+          <i18n-t
+            keypath="boson_photon_description"
             tag="span"
           >
             <template #amountAndGain>
@@ -130,7 +130,7 @@ export default {
                 {{ format(photon) }} {{ formatGain(photon, photonGain) }}
               </span>
             </template>
-          </i18n>
+          </i18n-t>
         </div>
         <BosonUpgradeButton
           v-for="upgrade in photonUpgrade"
@@ -140,8 +140,8 @@ export default {
       </div>
       <div class="c-boson-grid c-boson-gluon">
         <div class="c-boson-amount">
-          <i18n
-            path="boson_gluon_description"
+          <i18n-t
+            keypath="boson_gluon_description"
             tag="span"
           >
             <template #amountAndGain>
@@ -149,7 +149,7 @@ export default {
                 {{ format(gluon) }} {{ formatGain(gluon, gluonGain) }}
               </span>
             </template>
-          </i18n>
+          </i18n-t>
         </div>
         <BosonUpgradeButton
           v-for="upgrade in gluonUpgrade"
@@ -160,8 +160,8 @@ export default {
     </div>
     <div class="c-bosons-row-other">
       <div class="c-boson-grid c-boson-other">
-        <i18n
-          path="boson_positive_w_description"
+        <i18n-t
+          keypath="boson_positive_w_description"
           tag="div"
         >
           <template #amountAndGain>
@@ -175,11 +175,11 @@ export default {
           <template #gainEffect>
             {{ format(positiveWNeg) }}
           </template>
-        </i18n>
+        </i18n-t>
       </div>
       <div class="c-boson-grid c-boson-other">
-        <i18n
-          path="boson_negative_w_description"
+        <i18n-t
+          keypath="boson_negative_w_description"
           tag="div"
         >
           <template #amountAndGain>
@@ -193,11 +193,11 @@ export default {
           <template #gainEffect>
             {{ format(negativeWPos) }}
           </template>
-        </i18n>
+        </i18n-t>
       </div>
       <div class="c-boson-grid c-boson-other">
-        <i18n
-          path="boson_z_boson_description"
+        <i18n-t
+          keypath="boson_z_boson_description"
           tag="div"
         >
           <template #amountAndGain>
@@ -211,7 +211,7 @@ export default {
           <template #gainEffect>
             {{ format(zBosonW) }}
           </template>
-        </i18n>
+        </i18n-t>
       </div>
     </div>
   </div>

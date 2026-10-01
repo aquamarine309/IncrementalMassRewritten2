@@ -51,32 +51,32 @@ export default {
 <template>
   <div>
     <div><StartDilationButton /></div>
-    <i18n
-      path="you_have_X"
+    <i18n-t
+      keypath="you_have_X"
       tag="div"
     >
       <template #value>
         <span class="o-highlight">{{ format(particles, 0) }}</span>
         {{ $tc("relativistic_particle", checkSingle(particles)) }}
       </template>
-    </i18n>
-    <i18n
-      path="you_have_X"
+    </i18n-t>
+    <i18n-t
+      keypath="you_have_X"
       tag="div"
     >
       <template #value>
         <span class="o-highlight">{{ formatMass(mass) }} {{ formatGain(mass, gain, true) }}</span>
         {{ $tc("of_dilated_mass", checkSingle(mass)) }}
       </template>
-    </i18n>
-    <i18n
-      path="dilated_mass_boost_tickspeed"
+    </i18n-t>
+    <i18n-t
+      keypath="dilated_mass_boost_tickspeed"
       tag="div"
     >
       <template #value>
         <span class="o-highlight">{{ boostText }}</span>
       </template>
-    </i18n>
+    </i18n-t>
     <div>
       <PrimaryToggleButton
         v-if="autoUnlocked"

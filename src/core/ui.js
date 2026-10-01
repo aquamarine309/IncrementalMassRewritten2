@@ -1,5 +1,5 @@
 import { createApp, reactive } from "vue";
-import { createI18n } from "vue-i18n";
+import { createI18n, I18nT } from "vue-i18n";
 
 import GameUIComponent from "@/components/GameUIComponent";
 import { state } from "./ui.init";
@@ -158,6 +158,7 @@ window.ui = ui;
 
 const app = createApp(GameUIComponent);
 app.use(i18n);
+app.component("i18n-t", I18nT);
 app.use(Vue3TouchEvents);
 app.mixin(globalMixin);
 
